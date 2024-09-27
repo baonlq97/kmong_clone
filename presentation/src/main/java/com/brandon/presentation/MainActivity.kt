@@ -11,8 +11,9 @@ import com.brandon.presentation.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
-    override val viewModel: MainViewModel by viewModels()
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+    private val viewModel: MainViewModel by viewModels()
+
     override fun getViewBinding(): ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
     override fun initViews() {
     }
