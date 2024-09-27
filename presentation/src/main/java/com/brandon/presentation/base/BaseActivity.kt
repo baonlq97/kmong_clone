@@ -4,10 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import androidx.lifecycle.ViewModel
-abstract class BaseActivity<VB : ViewBinding, VM : ViewModel> : AppCompatActivity() {
+abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     protected lateinit var binding: VB
-    protected abstract val viewModel: VM
 
     abstract fun getViewBinding(): VB
 

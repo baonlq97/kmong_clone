@@ -11,13 +11,14 @@ import com.brandon.presentation.R
 import com.brandon.presentation.base.BaseFragment
 import com.brandon.presentation.databinding.FragmentAuthenticateBinding
 
-class AuthenticateFragment : BaseFragment<FragmentAuthenticateBinding, AuthenticateViewModel>() {
+class AuthenticateFragment : BaseFragment<FragmentAuthenticateBinding>() {
 
     companion object {
         fun newInstance() = AuthenticateFragment()
     }
 
-    override val viewModel: AuthenticateViewModel by viewModels()
+    private val viewModel: AuthenticateViewModel by viewModels()
+
     override fun getViewBinding(): FragmentAuthenticateBinding = FragmentAuthenticateBinding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
